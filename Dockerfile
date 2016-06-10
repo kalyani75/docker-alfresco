@@ -50,8 +50,8 @@ COPY assets/supervisord.conf /etc/supervisord.conf
 RUN mkdir -p /alfresco/tomcat/webapps/ROOT
 COPY assets/index.jsp /alfresco/tomcat/webapps/ROOT/
 
-VOLUME /alfresco/alf_data
-VOLUME /alfresco/tomcat/logs
+VOLUME /alf/alf_data
+VOLUME /alf/tomcat/logs
 
 EXPOSE 21 137 138 139 445 7070 8009 8080
 CMD /usr/bin/supervisord -c /etc/supervisord.conf -n
